@@ -12,7 +12,7 @@
       <!-- TODO: CODE TO RENDER LIST OF AUTHORS HERE -->
       <ul>
         <li v-for="author in authors" :key="author.id">
-          <span :style="{ fontWeight: author.name === highlightedAuthor ? fontWeight : 'normal' }"
+          <span :style="{ fontWeight: author.name === highlightedAuthor ? 'bold' : 'normal' }"
             >{{ author.name }} ({{ author.birthYear }})</span
           >
         </li>
@@ -24,7 +24,7 @@
       <!-- TODO: CODE TO RENDER LIST OF AUTHORS HERE -->
       <ul>
         <li v-for="author in modernAuthors" :key="author.id">
-          <span :style="{ fontWeight: author.name === highlightedAuthor ? fontWeight : 'normal' }"
+          <span :style="{ fontWeight: author.name === highlightedAuthor ? 'bold' : 'normal' }"
             >{{ author.name }} ({{ author.birthYear }})</span
           >
         </li>
@@ -129,7 +129,6 @@ import bookstores from '../assets/json/bookstores.json'
 
 const showMessage = ref(false)
 
-const fontWeight = ref('bold')
 const highlightedAuthor = ref('George Orwell')
 
 // Activity 2: Get authors born after 1850
